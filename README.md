@@ -47,7 +47,7 @@ Logearse
 
 Crear rama
     
-    >git checkout -b feature/prueba
+    >git checkout -b "nombre de la dimension 2XD"
 
 Ver rama
 
