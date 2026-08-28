@@ -61,6 +61,10 @@ Ir a una etapa del git
 
     >git reset --hard "id del commit"
 
+Subir a tu github personal
+
+    >git remote set-url origin git@github:usuario/repositorio.git
+
 Instalar dependencias:
 
     npm install
