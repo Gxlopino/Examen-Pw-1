@@ -28,6 +28,37 @@ La aplicación utiliza Supabase como base de datos y dispone de migraciones SQL 
 Descargar Git [Enlace](https://git-scm.com/install/windows)
 
 ![Sitio web de descarga](./docs/gitwindows.png)
+Crear proyecto git
+
+    >git init
+
+Pasos para guardar el proyecto en git
+
+    >git status
+    >git add . (o ponemos el nombre del archivo)
+    >git commit -m "Titulo"
+    >git log --oneline
+
+Logearse
+
+    >git config --global user.name "tu nombre"
+    >git config --global user.email "tu correo"
+
+Crear rama
+    
+    >git checkout -b feature/prueba
+
+Ver rama
+
+    >git branch
+
+Regresar a rama
+
+    >git checkout master
+
+Ir a una etapa del git
+
+    >git reset --hard "id del commit"
 
 Instalar dependencias:
 
