@@ -35,7 +35,8 @@ Crear proyecto git
 Pasos para guardar el proyecto en git
 
     >git status
-    >git add . (o ponemos el nombre del archivo)
+    >git add . o "Nombre del archivo"
+    >git restore . o "Nombre del archivo"
     >git commit -m "Titulo"
     >git log --oneline
 
