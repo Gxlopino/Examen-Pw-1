@@ -67,7 +67,17 @@ Subir a tu github personal
 
 Instalar dependencias:
 
-    npm install
+Para esto tenemos que instalar node.js (variable de entorono de ser necesario)
+
+    npm install (en la carpeta de tu proyecto)
+
+Correr dependencia:
+
+    npm run dev (se corre el front y backend)
+
+Crear html:
+
+    html:5 (en un archivo creado y se crea una base)
 
 npm install -g vercel
 vercel login
