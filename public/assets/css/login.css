@@ -1,0 +1,66 @@
+body {
+            height: 100vh;
+            background-image: url("/assets/img/Ulimafondo.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;   
+        }
+        .form {
+            width: 330px;
+            background-color: rgba(255, 255, 255, 0.8);  
+            margin: 0 auto;
+            padding-top: 50px;
+            margin-top: 80px;
+        }
+        .logo {
+            display: block;
+            margin: auto;
+            width: 203px;
+            height: 50px;
+        }
+        label {
+            display: block;
+            margin: 0 auto;
+        }
+        input {
+            display: block;
+            margin: 10px auto;
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+        }
+        h1 {
+            margin: 10px auto;
+        }
+        p {
+            margin: 10px auto;
+            text-align: justify;
+        }
+        small {
+            display: block;
+            margin: 10px auto;
+        }
+        .centro{
+            display: block;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .input{
+            display: block;
+            border:#343434 1px solid;
+            border-radius: 0px;
+            width: 90%;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0);
+            box-sizing: border-box;  
+        }
+        .bing{
+            border-radius: 0px;
+            width: 75%;
+            padding: 10px;
+            background: #121314;
+            color: aliceblue;
+        }

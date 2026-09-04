@@ -1,0 +1,68 @@
+/* Fondo personalizado del Navbar */
+.custom-navbar {
+    background-color: #E84816 !important;
+}
+
+/* Texto negro en los enlaces de navegación */
+.custom-navbar .navbar-nav .nav-link {
+    color: #000000 !important;
+    font-weight: 500;
+}
+
+/* Efecto hover y activo para los enlaces */
+.custom-navbar .navbar-nav .nav-link:hover,
+.custom-navbar .navbar-nav .nav-link:focus,
+.custom-navbar .navbar-nav .nav-link.active {
+    color: #222222 !important;
+    text-decoration: underline;
+}
+
+/* Ícono del menú colapsable (hamburguesa) en negro para celulares */
+.custom-navbar .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.4);
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Estilos del menú desplegable (dropdown) */
+.custom-navbar .dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.custom-navbar .dropdown-item {
+    color: #000000;
+}
+
+.custom-navbar .dropdown-item:hover {
+    background-color: #f1f1f1;
+    color: #000000;
+}
+
+/* Botón "Editar perfil" */
+.btn-edit-profile {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    font-weight: 500;
+}
+
+.btn-edit-profile:hover {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+/* Botón "Cerrar sesión" */
+.btn-logout {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+    font-weight: 500;
+}
+
+.btn-logout:hover {
+    background-color: #222222;
+    color: #ffffff;
+}
