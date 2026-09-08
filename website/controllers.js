@@ -8,6 +8,18 @@ export function home(req, res) {
   });
 }
 
+export function login(req, res) {
+  return res.render('website/login', {
+    title: 'Iniciar Sesion',
+  });
+}
+
+export function ResetPassword(req, res) {
+  return res.render('website/reset-password', {
+    title: 'Recuperar Cuenta',
+  });
+}
+
 export function about(req, res) {
   return res.render('website/about', {
     title: 'Acerca de',
@@ -42,7 +54,7 @@ export function signIn(req, res) {
   });
 }
 
-export async function login(req, res) {
+export async function login2(req, res) {
   const { user, password } = req.body;
   const validUser = process.env.DEFAULT_USER || 'admin';
   const validPassword = process.env.DEFAULT_PASSWORD || '123';

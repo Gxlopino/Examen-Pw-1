@@ -14,5 +14,7 @@ router.get('/sign-in', controller.signIn);
 router.post('/sign-in', redirectIfAuthenticated, controller.login);
 router.get('/sign-out', requireAuth, controller.logout);
 router.get('/api/v1/sessions', api.sessionInfo);
+router.get('/login',controller.login)
+router.get('/reset-password',controller.ResetPassword)
 
 export default router;
