@@ -7,6 +7,11 @@ export function home(req, res) {
       'Esta es una aplicación de ejemplo creada con Node.js, Express y EJS.'
   });
 }
+export function register(req, res) {
+  return res.render('website/register', {
+    title: 'Crear cuenta :)',
+  });
+}
 
 export function login(req, res) {
   let fondos =["/assets/img/Ulimafondo.png","/assets/img/Ulimafondo2.png","/assets/img/Ulimafondo3.jpg"]
@@ -17,8 +22,10 @@ export function login(req, res) {
 }
 
 export function ResetPassword(req, res) {
+  let fondos =["/assets/img/Ulimafondo.png","/assets/img/Ulimafondo2.png","/assets/img/Ulimafondo3.jpg"]
   return res.render('website/reset-password', {
     title: 'Recuperar Cuenta',
+    background: fondos[Math.floor(Math.random() * 3)]
   });
 }
 

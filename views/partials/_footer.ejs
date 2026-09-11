@@ -1,55 +1,116 @@
 <!-- views/partials/_footer.ejs -->
-<footer class="bg-dark text-white mt-auto">
 
-  <div class="container py-5">
+<footer class="bg-dark text-white mt-auto position-relative overflow-hidden">
 
-    <div class="row g-4">
+  <!-- Decoración de fondo -->
+  <div
+    class="position-absolute top-0 start-0 w-100 h-100 opacity-25"
+    style="
+      background:
+        radial-gradient(circle at 10% 20%, rgba(25, 135, 84, .35), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(13, 110, 253, .20), transparent 30%);
+      pointer-events: none;
+    ">
+  </div>
 
-      <!-- Columna 1: Información -->
+
+  <div class="container py-5 position-relative">
+
+    <!-- Contenido principal -->
+    <div class="row g-5">
+
+
+      <!-- ==================== -->
+      <!-- COLUMNA 1 -->
+      <!-- ==================== -->
+
       <div class="col-12 col-md-6 col-lg">
 
-        <h5 class="fw-bold text-success mb-3">
-          PrácticaLima
-        </h5>
+        <div class="d-flex align-items-center mb-3">
 
-        <p class="text-secondary mb-0">
+          <div
+            class="d-flex align-items-center justify-content-center rounded-3 me-2"
+            style="
+              width: 42px;
+              height: 42px;
+              background: linear-gradient(135deg, #198754, #20c997);
+            ">
+
+            <i class="bi bi-briefcase-fill text-white fs-5"></i>
+
+          </div>
+
+          <h4 class="fw-bold mb-0">
+            Práctica<span class="text-success">Lima</span>
+          </h4>
+
+        </div>
+
+
+        <p class="text-secondary lh-lg mb-4">
           Bolsa de prácticas pre-profesionales para estudiantes
           de la Universidad de Lima.
         </p>
 
+
+        <span
+          class="badge rounded-pill bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2">
+
+          <i class="bi bi-mortarboard-fill me-1"></i>
+          Talento universitario
+
+        </span>
+
       </div>
 
 
-      <!-- Columna 2: Plataforma -->
+
+      <!-- ==================== -->
+      <!-- COLUMNA 2 -->
+      <!-- ==================== -->
+
       <div class="col-6 col-md-3 col-lg">
 
-        <h6 class="text-uppercase fw-bold mb-3">
-          Plataforma
+        <h6 class="fw-bold mb-4">
+          <i class="bi bi-grid-fill text-success me-2"></i>
+          PLATAFORMA
         </h6>
 
-        <ul class="list-unstyled">
 
-          <li class="mb-2">
+        <ul class="list-unstyled mb-0">
+
+          <li class="mb-3">
             <a
               href="/convocatorias"
-              class="text-secondary text-decoration-none">
+              class="footer-link text-secondary text-decoration-none">
+
+              <i class="bi bi-megaphone me-2"></i>
               Convocatorias
+
             </a>
           </li>
 
-          <li class="mb-2">
+
+          <li class="mb-3">
             <a
               href="/empresas"
-              class="text-secondary text-decoration-none">
+              class="footer-link text-secondary text-decoration-none">
+
+              <i class="bi bi-buildings me-2"></i>
               Empresas
+
             </a>
           </li>
 
-          <li class="mb-2">
+
+          <li>
             <a
               href="/publicar-convocatoria"
-              class="text-secondary text-decoration-none">
+              class="footer-link text-secondary text-decoration-none">
+
+              <i class="bi bi-plus-circle me-2"></i>
               Publicar convocatoria
+
             </a>
           </li>
 
@@ -58,36 +119,53 @@
       </div>
 
 
-      <!-- Columna 3: Ayuda -->
+
+      <!-- ==================== -->
+      <!-- COLUMNA 3 -->
+      <!-- ==================== -->
+
       <div class="col-6 col-md-3 col-lg">
 
-        <h6 class="text-uppercase fw-bold mb-3">
-          Ayuda
+        <h6 class="fw-bold mb-4">
+          <i class="bi bi-question-circle-fill text-success me-2"></i>
+          AYUDA
         </h6>
 
-        <ul class="list-unstyled">
 
-          <li class="mb-2">
+        <ul class="list-unstyled mb-0">
+
+          <li class="mb-3">
             <a
               href="/preguntas-frecuentes"
-              class="text-secondary text-decoration-none">
+              class="footer-link text-secondary text-decoration-none">
+
+              <i class="bi bi-chat-left-text me-2"></i>
               Preguntas frecuentes
+
             </a>
           </li>
 
-          <li class="mb-2">
+
+          <li class="mb-3">
             <a
               href="/terminos"
-              class="text-secondary text-decoration-none">
+              class="footer-link text-secondary text-decoration-none">
+
+              <i class="bi bi-file-earmark-text me-2"></i>
               Términos del servicio
+
             </a>
           </li>
 
-          <li class="mb-2">
+
+          <li>
             <a
               href="/privacidad"
-              class="text-secondary text-decoration-none">
+              class="footer-link text-secondary text-decoration-none">
+
+              <i class="bi bi-shield-check me-2"></i>
               Privacidad de datos
+
             </a>
           </li>
 
@@ -96,49 +174,112 @@
       </div>
 
 
-      <!-- Columna 4: Contacto -->
+
+      <!-- ==================== -->
+      <!-- COLUMNA 4 -->
+      <!-- ==================== -->
+
       <div class="col-12 col-md-6 col-lg">
 
-        <h6 class="text-uppercase fw-bold mb-3">
-          Contacto
+        <h6 class="fw-bold mb-4">
+          <i class="bi bi-headset text-success me-2"></i>
+          CONTACTO
         </h6>
 
-        <p class="text-secondary mb-2">
-          <i class="bi bi-envelope me-2"></i>
-          <a
-            href="mailto:practicas@ulima.edu.pe"
-            class="text-secondary text-decoration-none">
-            practicas@ulima.edu.pe
-          </a>
-        </p>
 
-        <p class="text-secondary mb-0">
-          <i class="bi bi-geo-alt me-2"></i>
-          Av. Javier Prado Este 4600
-          <br>
-          <span class="ms-4">
-            Sede Monterrico, Lima
-          </span>
-        </p>
+        <div class="d-flex mb-3">
+
+          <i class="bi bi-envelope-fill text-success me-3 mt-1"></i>
+
+          <div>
+            <small class="text-secondary d-block mb-1">
+              Correo electrónico
+            </small>
+
+            <a
+              href="mailto:practicas@ulima.edu.pe"
+              class="footer-link text-white text-decoration-none">
+
+              practicas@ulima.edu.pe
+
+            </a>
+          </div>
+
+        </div>
+
+
+        <div class="d-flex">
+
+          <i class="bi bi-geo-alt-fill text-success me-3 mt-1"></i>
+
+          <div>
+
+            <small class="text-secondary d-block mb-1">
+              Dirección
+            </small>
+
+            <span class="text-secondary">
+              Av. Javier Prado Este 4600
+              <br>
+              Sede Monterrico, Lima
+            </span>
+
+          </div>
+
+        </div>
 
       </div>
 
 
-      <!-- Columna 5: Universidad de Lima -->
+
+      <!-- ==================== -->
+      <!-- COLUMNA 5 -->
+      <!-- ==================== -->
+
       <div class="col-12 col-md-6 col-lg">
 
-        <h6 class="text-uppercase fw-bold mb-3">
-          Universidad
+        <h6 class="fw-bold mb-4">
+          <i class="bi bi-building text-success me-2"></i>
+          INSTITUCIÓN
         </h6>
+
 
         <a
           href="https://www.ulima.edu.pe/"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-success text-decoration-none fw-semibold">
+          class="text-decoration-none">
 
-          Universidad de Lima
-          <i class="bi bi-box-arrow-up-right ms-1"></i>
+          <div
+            class="p-3 rounded-4 border border-secondary border-opacity-25 footer-university">
+
+            <div class="d-flex align-items-center">
+
+              <div
+                class="d-flex align-items-center justify-content-center bg-success rounded-3 me-3"
+                style="width: 45px; height: 45px;">
+
+                <i class="bi bi-mortarboard-fill text-white fs-5"></i>
+
+              </div>
+
+
+              <div>
+
+                <h6 class="text-white fw-bold mb-1">
+                  Universidad de Lima
+                </h6>
+
+                <small class="text-secondary">
+                  Visitar sitio web
+                  <i class="bi bi-arrow-up-right ms-1"></i>
+                </small>
+
+              </div>
+
+            </div>
+
+          </div>
 
         </a>
 
@@ -147,23 +288,120 @@
     </div>
 
 
-    <hr class="border-secondary my-4">
+
+    <!-- Línea -->
+    <hr class="border-secondary border-opacity-25 my-5">
 
 
-    <!-- Copyright -->
+
+    <!-- Bottom -->
     <div
-      class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+      class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
 
-      <p class="text-secondary small mb-2 mb-md-0">
-        © 2026 PrácticaLima. Todos los derechos reservados.
-      </p>
+      <div class="text-center text-md-start">
 
-      <p class="text-secondary small mb-0">
-        Universidad de Lima
-      </p>
+        <p class="text-secondary small mb-1">
+          © 2026 <span class="text-white fw-semibold">PrácticaLima</span>
+        </p>
+
+        <p class="text-secondary small mb-0">
+          Conectando estudiantes con oportunidades profesionales.
+        </p>
+
+      </div>
+
+
+      <!-- Redes / enlaces -->
+      <div class="d-flex gap-2">
+
+        <a
+          href="#"
+          class="social-btn"
+          aria-label="LinkedIn">
+
+          <i class="bi bi-linkedin"></i>
+
+        </a>
+
+
+        <a
+          href="#"
+          class="social-btn"
+          aria-label="Instagram">
+
+          <i class="bi bi-instagram"></i>
+
+        </a>
+
+
+        <a
+          href="#"
+          class="social-btn"
+          aria-label="Facebook">
+
+          <i class="bi bi-facebook"></i>
+
+        </a>
+
+      </div>
 
     </div>
 
   </div>
 
-</footer> 
+</footer>
+
+
+<!-- Estilos del footer -->
+<style>
+
+  .footer-link {
+    transition: all .2s ease;
+    display: inline-block;
+  }
+
+  .footer-link:hover {
+    color: #20c997 !important;
+    transform: translateX(4px);
+  }
+
+
+  .footer-university {
+    transition: all .25s ease;
+    background: rgba(255, 255, 255, .02);
+  }
+
+  .footer-university:hover {
+    background: rgba(25, 135, 84, .12);
+    border-color: rgba(25, 135, 84, .5) !important;
+    transform: translateY(-3px);
+  }
+
+
+  .social-btn {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #adb5bd;
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    text-decoration: none;
+
+    transition: all .25s ease;
+  }
+
+
+  .social-btn:hover {
+    color: white;
+    background: #198754;
+    border-color: #198754;
+    transform: translateY(-3px);
+  }
+
+</style>
