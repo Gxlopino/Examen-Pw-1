@@ -9,8 +9,10 @@ export function home(req, res) {
 }
 
 export function login(req, res) {
+  let fondos =["/assets/img/Ulimafondo.png","/assets/img/Ulimafondo2.png","/assets/img/Ulimafondo3.jpg"]
   return res.render('website/login', {
     title: 'Iniciar Sesion',
+    background: fondos[Math.floor(Math.random() * 3)]
   });
 }
 

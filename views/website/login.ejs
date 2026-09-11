@@ -1,42 +1,27 @@
- <!-- views\website\login.ejs-->
+<!-- views\website\login.ejs-->
 <% layout("layouts/access")%>
 
     <div class="form mx-auto p-4 shadow rounded-3">
-        <img
-            class="logo d-block mx-auto mb-4"
-            src="/assets/img/Ulimalogo.png"
-            alt="Logo de la Universidad de Lima"
-            width="200"
-            height="100"
-        >
+        <img class="logo d-block mx-auto mb-4" src="/assets/img/Ulimalogo.png" alt="Logo de la Universidad de Lima"
+            width="200" height="100">
+        <div class="alert alert-success d-none" role="alert" id="Error">
+            A simple danger alert—check it out!
+        </div>
 
-       
-            <div class="form-floating mb-3">
-                <input
-                    type="text"
-                    class="form-control rounded-0"
-                    id="txtuser"
-                    name="user"
-                    placeholder="usuario"
-                >
-                <label for="txtuser">Usuario</label>
-            </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control rounded-0" id="txtuser" name="user" placeholder="usuario">
+            <label for="txtuser">Usuario</label>
+        </div>
 
-            <div class="form-floating mb-3">
-                <input
-                    type="password"
-                    class="form-control rounded-0"
-                    id="txtpass"
-                    name="pass"
-                    placeholder="contraseña"
-                >
-                <label for="txtpass">Contraseña</label>
-            </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control rounded-0" id="txtpass" name="pass" placeholder="contraseña">
+            <label for="txtpass">Contraseña</label>
+        </div>
 
-            <button class="btn btn-dark w-75 d-block mx-auto rounded-0 mb-3" onclick="ingresar()">
-                Iniciar sesión
-            </button>
-        
+        <button class="btn btn-dark w-75 d-block mx-auto rounded-0 mb-3" onclick="ingresar()" id="btningresar">
+            Iniciar sesión
+        </button>
+
 
         <a href="/reset-password" class="d-block text-center mb-4">
             ¿Has olvidado tu contraseña?
@@ -61,18 +46,64 @@
                 <br>
                 <strong>Horario:</strong> Lunes a viernes 7-22hrs, Sábados 7-13hrs
             </p>
-            
+
         </div>
         <small class="d-block">
-        Choy te vas a morir de alcohol
+            Choy te vas a morir de alcohol
         </small>
     </div>
-    
-<script>
-    function ingresar(){
-        let username = document.getElementById("txtuser").value;
-        console.log(username)
-        let password = document.getElementById("txtpass").value;
-        console.log(password)
-    }
-</script>
+
+    <script>
+        function ingresar() {
+            let username = document.getElementById("txtuser").value;
+            let password = document.getElementById("txtpass").value;
+            let alert = document.getElementById("Error");
+            console.log(username)
+            console.log(password)
+            if (username == "" || password == "") {
+                // alert("ingresa los campos");
+                console.log(alert)
+                console.log(alert.classList)
+                alert.classList.remove("d-none");
+                alert.classList.add("alert-danger");
+                alert.classList.remove("alert-success");
+                alert.innerHTML = "llena los datos oe ";
+            } else {
+                if (username == "admin" && password == "123") {
+                    alert.classList.remove("d-none");
+                    alert.innerHTML = "Bienvenido";
+                    alert.classList.remove("alert-danger");
+                    alert.classList.add("alert-success");
+                    document.getElementById("txtuser").disabled = true;
+                    document.getElementById("txtpass").disabled = true;
+                    document.getElementById("btningresar").disabled = true;
+                    setInterval(() => {
+                        window.location.href = "/dashboard.html"
+                    }, 5000);
+                }
+                else {
+                    alert.classList.remove("d-none");
+                    alert.classList.add("alert-danger");
+                    alert.classList.remove("alert-success");
+                    alert.innerHTML = "Credenciales invalidas";
+                }
+            }
+            setInterval(() => {
+                alert.classList.add("d-none")
+            }, 5000);
+
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let fondos = ["/assets/img/Ulimafondo.png", "/assets/img/Ulimafondo2.png", "/assets/img/Ulimafondo3.jpg"];
+            setInterval(() => {
+                let indice = Math.floor(Math.random() * 3)
+                document.body.style.backgroundImage = `url('${fondos[indice]}')`;
+                indice = (indice + 1) % fondos.length;
+            }, 1000);
+            console.log("Hola mundo");
+
+        });
+
+
+    </script>
