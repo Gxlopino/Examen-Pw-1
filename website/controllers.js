@@ -13,6 +13,24 @@ export function register(req, res) {
   });
 }
 
+export function convocatorias(req, res) {
+  return res.render('website/convocatorias', {
+    title: 'Convocatorias',
+  });
+}
+
+export function empresas(req, res) {
+  return res.render('website/empresas', {
+    title: 'Empresas',
+  });
+}
+
+export function como_funciona(req, res) {
+  return res.render('website/como-funciona', {
+    title: 'Como funciona',
+  });
+}
+
 export function login(req, res) {
   let fondos =["/assets/img/Ulimafondo.png","/assets/img/Ulimafondo2.png","/assets/img/Ulimafondo3.jpg"]
   return res.render('website/login', {

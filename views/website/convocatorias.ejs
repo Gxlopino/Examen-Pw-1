@@ -1,0 +1,1171 @@
+<!-- views/website/convocatorias.ejs -->
+
+<% layout("layouts/website") %>
+
+
+<!-- =========================================================
+     ENCABEZADO
+========================================================= -->
+
+<section class="convocatorias-header text-white py-5">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-8">
+
+        <span class="badge bg-success px-3 py-2 mb-3">
+          <i class="fa-solid fa-bullhorn me-2"></i>
+          OPORTUNIDADES PROFESIONALES
+        </span>
+
+        <h1 class="display-5 fw-bold mb-3">
+          Convocatorias de prácticas
+        </h1>
+
+        <p class="lead text-secondary mb-0">
+          Encuentra oportunidades de prácticas pre-profesionales
+          y comienza a construir tu experiencia laboral.
+        </p>
+
+      </div>
+
+
+      <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+        <i class="fa-solid fa-graduation-cap header-icon"></i>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTENIDO
+========================================================= -->
+
+<section class="py-5 bg-light">
+
+  <div class="container">
+
+    <div class="row g-4">
+
+      <!-- =====================================================
+           FILTROS ESTÁTICOS
+      ====================================================== -->
+
+      <div class="col-12 col-lg-3">
+
+        <div class="card border-0 shadow-sm filter-card">
+
+          <div class="card-body p-4">
+
+            <h5 class="fw-bold mb-4">
+              <i class="fa-solid fa-filter text-success me-2"></i>
+              Filtrar resultados
+            </h5>
+
+
+            <div class="mb-4">
+
+              <label class="form-label fw-semibold">
+                Buscar
+              </label>
+
+              <div class="input-group">
+
+                <span class="input-group-text bg-white">
+                  <i class="fa-solid fa-magnifying-glass text-success"></i>
+                </span>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Cargo o empresa">
+
+              </div>
+
+            </div>
+
+
+            <div class="mb-4">
+
+              <label class="form-label fw-semibold">
+                Modalidad
+              </label>
+
+              <select class="form-select">
+
+                <option selected>
+                  Todas
+                </option>
+
+                <option>
+                  Presencial
+                </option>
+
+                <option>
+                  Remoto
+                </option>
+
+                <option>
+                  Híbrido
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="mb-4">
+
+              <label class="form-label fw-semibold">
+                Jornada
+              </label>
+
+              <select class="form-select">
+
+                <option selected>
+                  Todas
+                </option>
+
+                <option>
+                  Part time
+                </option>
+
+                <option>
+                  Full time
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="mb-4">
+
+              <label class="form-label fw-semibold">
+                Ubicación
+              </label>
+
+              <select class="form-select">
+
+                <option selected>
+                  Todas
+                </option>
+
+                <option>
+                  Lima
+                </option>
+
+                <option>
+                  Callao
+                </option>
+
+                <option>
+                  Trabajo remoto
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <button
+              type="button"
+              class="btn btn-success w-100">
+
+              <i class="fa-solid fa-filter me-2"></i>
+              Aplicar filtros
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           CONVOCATORIAS ESTÁTICAS
+      ====================================================== -->
+
+      <div class="col-12 col-lg-9">
+
+        <div class="d-flex flex-column flex-md-row
+                    justify-content-between
+                    align-items-md-center
+                    gap-3 mb-4">
+
+          <div>
+
+            <h4 class="fw-bold mb-1">
+              Oportunidades disponibles
+            </h4>
+
+            <p class="text-muted mb-0">
+              Encuentra una convocatoria que se adapte a tu perfil.
+            </p>
+
+          </div>
+
+
+          <span class="badge bg-success-subtle text-success px-3 py-2">
+            6 convocatorias disponibles
+          </span>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             CONVOCATORIA 1
+        ====================================================== -->
+
+        <div class="card border-0 shadow-sm opportunity-card mb-4">
+
+          <div class="card-body p-4">
+
+            <div class="d-flex justify-content-between
+                        align-items-start gap-3">
+
+              <div class="d-flex gap-3">
+
+                <div class="company-logo company-logo-green">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <div>
+
+                  <span class="badge bg-success-subtle text-success mb-2">
+                    Nueva convocatoria
+                  </span>
+
+                  <h5 class="fw-bold mb-1">
+                    Practicante de Analítica de Datos
+                  </h5>
+
+                  <p class="text-muted mb-0">
+                    <i class="fa-solid fa-building me-1"></i>
+                    Innovatech Perú
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <button
+                type="button"
+                class="btn btn-light bookmark-btn"
+                aria-label="Guardar convocatoria">
+
+                <i class="fa-regular fa-bookmark"></i>
+
+              </button>
+
+            </div>
+
+
+            <p class="text-muted mt-4 mb-4">
+              Apoya en el análisis de información, elaboración de reportes
+              y generación de indicadores para la toma de decisiones.
+            </p>
+
+
+            <div class="d-flex flex-wrap gap-3 text-muted small mb-4">
+
+              <span>
+                <i class="fa-solid fa-location-dot text-success me-1"></i>
+                Lima
+              </span>
+
+              <span>
+                <i class="fa-solid fa-clock text-success me-1"></i>
+                Part time
+              </span>
+
+              <span>
+                <i class="fa-solid fa-laptop-house text-success me-1"></i>
+                Híbrido
+              </span>
+
+              <span>
+                <i class="fa-solid fa-calendar text-success me-1"></i>
+                Publicado recientemente
+              </span>
+
+            </div>
+
+
+            <div class="d-flex flex-column flex-md-row
+                        justify-content-between
+                        align-items-md-center gap-3">
+
+              <div class="d-flex flex-wrap gap-2">
+
+                <span class="badge skill-badge">
+                  Excel
+                </span>
+
+                <span class="badge skill-badge">
+                  SQL
+                </span>
+
+                <span class="badge skill-badge">
+                  Power BI
+                </span>
+
+              </div>
+
+
+              <a
+                href="#"
+                class="btn btn-outline-success">
+
+                Ver convocatoria
+                <i class="fa-solid fa-arrow-right ms-2"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             CONVOCATORIA 2
+        ====================================================== -->
+
+        <div class="card border-0 shadow-sm opportunity-card mb-4">
+
+          <div class="card-body p-4">
+
+            <div class="d-flex justify-content-between
+                        align-items-start gap-3">
+
+              <div class="d-flex gap-3">
+
+                <div class="company-logo company-logo-blue">
+                  <i class="fa-solid fa-bullhorn"></i>
+                </div>
+
+                <div>
+
+                  <span class="badge bg-primary-subtle text-primary mb-2">
+                    Convocatoria activa
+                  </span>
+
+                  <h5 class="fw-bold mb-1">
+                    Practicante de Marketing
+                  </h5>
+
+                  <p class="text-muted mb-0">
+                    <i class="fa-solid fa-building me-1"></i>
+                    Agencia Punto Creativo
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <button
+                type="button"
+                class="btn btn-light bookmark-btn"
+                aria-label="Guardar convocatoria">
+
+                <i class="fa-regular fa-bookmark"></i>
+
+              </button>
+
+            </div>
+
+
+            <p class="text-muted mt-4 mb-4">
+              Participa en la creación de contenido, gestión de redes
+              sociales y análisis de campañas digitales.
+            </p>
+
+
+            <div class="d-flex flex-wrap gap-3 text-muted small mb-4">
+
+              <span>
+                <i class="fa-solid fa-location-dot text-success me-1"></i>
+                Lima
+              </span>
+
+              <span>
+                <i class="fa-solid fa-clock text-success me-1"></i>
+                Part time
+              </span>
+
+              <span>
+                <i class="fa-solid fa-laptop-house text-success me-1"></i>
+                Presencial
+              </span>
+
+              <span>
+                <i class="fa-solid fa-calendar text-success me-1"></i>
+                Publicado hace 2 días
+              </span>
+
+            </div>
+
+
+            <div class="d-flex flex-column flex-md-row
+                        justify-content-between
+                        align-items-md-center gap-3">
+
+              <div class="d-flex flex-wrap gap-2">
+
+                <span class="badge skill-badge">
+                  Marketing digital
+                </span>
+
+                <span class="badge skill-badge">
+                  Redes sociales
+                </span>
+
+                <span class="badge skill-badge">
+                  Diseño
+                </span>
+
+              </div>
+
+
+              <a
+                href="#"
+                class="btn btn-outline-success">
+
+                Ver convocatoria
+                <i class="fa-solid fa-arrow-right ms-2"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             CONVOCATORIA 3
+        ====================================================== -->
+
+        <div class="card border-0 shadow-sm opportunity-card mb-4">
+
+          <div class="card-body p-4">
+
+            <div class="d-flex justify-content-between
+                        align-items-start gap-3">
+
+              <div class="d-flex gap-3">
+
+                <div class="company-logo company-logo-purple">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+
+                <div>
+
+                  <span class="badge bg-warning-subtle text-warning mb-2">
+                    Últimas vacantes
+                  </span>
+
+                  <h5 class="fw-bold mb-1">
+                    Practicante de Desarrollo Web
+                  </h5>
+
+                  <p class="text-muted mb-0">
+                    <i class="fa-solid fa-building me-1"></i>
+                    Soluciones Digitales
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <button
+                type="button"
+                class="btn btn-light bookmark-btn"
+                aria-label="Guardar convocatoria">
+
+                <i class="fa-regular fa-bookmark"></i>
+
+              </button>
+
+            </div>
+
+
+            <p class="text-muted mt-4 mb-4">
+              Colabora en el desarrollo y mantenimiento de aplicaciones
+              web utilizando tecnologías modernas.
+            </p>
+
+
+            <div class="d-flex flex-wrap gap-3 text-muted small mb-4">
+
+              <span>
+                <i class="fa-solid fa-location-dot text-success me-1"></i>
+                Lima
+              </span>
+
+              <span>
+                <i class="fa-solid fa-clock text-success me-1"></i>
+                Full time
+              </span>
+
+              <span>
+                <i class="fa-solid fa-laptop-house text-success me-1"></i>
+                Remoto
+              </span>
+
+              <span>
+                <i class="fa-solid fa-calendar text-success me-1"></i>
+                Publicado hace 3 días
+              </span>
+
+            </div>
+
+
+            <div class="d-flex flex-column flex-md-row
+                        justify-content-between
+                        align-items-md-center gap-3">
+
+              <div class="d-flex flex-wrap gap-2">
+
+                <span class="badge skill-badge">
+                  JavaScript
+                </span>
+
+                <span class="badge skill-badge">
+                  Node.js
+                </span>
+
+                <span class="badge skill-badge">
+                  Git
+                </span>
+
+              </div>
+
+
+              <a
+                href="#"
+                class="btn btn-outline-success">
+
+                Ver convocatoria
+                <i class="fa-solid fa-arrow-right ms-2"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             CONVOCATORIA 4
+        ====================================================== -->
+
+        <div class="card border-0 shadow-sm opportunity-card mb-4">
+
+          <div class="card-body p-4">
+
+            <div class="d-flex justify-content-between
+                        align-items-start gap-3">
+
+              <div class="d-flex gap-3">
+
+                <div class="company-logo company-logo-orange">
+                  <i class="fa-solid fa-calculator"></i>
+                </div>
+
+                <div>
+
+                  <span class="badge bg-info-subtle text-info mb-2">
+                    Convocatoria activa
+                  </span>
+
+                  <h5 class="fw-bold mb-1">
+                    Practicante de Contabilidad
+                  </h5>
+
+                  <p class="text-muted mb-0">
+                    <i class="fa-solid fa-building me-1"></i>
+                    Grupo Financiero Andino
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <button
+                type="button"
+                class="btn btn-light bookmark-btn"
+                aria-label="Guardar convocatoria">
+
+                <i class="fa-regular fa-bookmark"></i>
+
+              </button>
+
+            </div>
+
+
+            <p class="text-muted mt-4 mb-4">
+              Apoya en el registro de operaciones, conciliaciones bancarias
+              y elaboración de reportes contables.
+            </p>
+
+
+            <div class="d-flex flex-wrap gap-3 text-muted small mb-4">
+
+              <span>
+                <i class="fa-solid fa-location-dot text-success me-1"></i>
+                San Isidro
+              </span>
+
+              <span>
+                <i class="fa-solid fa-clock text-success me-1"></i>
+                Part time
+              </span>
+
+              <span>
+                <i class="fa-solid fa-laptop-house text-success me-1"></i>
+                Presencial
+              </span>
+
+              <span>
+                <i class="fa-solid fa-calendar text-success me-1"></i>
+                Publicado hace 4 días
+              </span>
+
+            </div>
+
+
+            <div class="d-flex flex-column flex-md-row
+                        justify-content-between
+                        align-items-md-center gap-3">
+
+              <div class="d-flex flex-wrap gap-2">
+
+                <span class="badge skill-badge">
+                  Excel
+                </span>
+
+                <span class="badge skill-badge">
+                  Contabilidad
+                </span>
+
+                <span class="badge skill-badge">
+                  Finanzas
+                </span>
+
+              </div>
+
+
+              <a
+                href="#"
+                class="btn btn-outline-success">
+
+                Ver convocatoria
+                <i class="fa-solid fa-arrow-right ms-2"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             CONVOCATORIA 5
+        ====================================================== -->
+
+        <div class="card border-0 shadow-sm opportunity-card mb-4">
+
+          <div class="card-body p-4">
+
+            <div class="d-flex justify-content-between
+                        align-items-start gap-3">
+
+              <div class="d-flex gap-3">
+
+                <div class="company-logo company-logo-red">
+                  <i class="fa-solid fa-users"></i>
+                </div>
+
+                <div>
+
+                  <span class="badge bg-danger-subtle text-danger mb-2">
+                    Nueva convocatoria
+                  </span>
+
+                  <h5 class="fw-bold mb-1">
+                    Practicante de Recursos Humanos
+                  </h5>
+
+                  <p class="text-muted mb-0">
+                    <i class="fa-solid fa-building me-1"></i>
+                    Consultores Asociados
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <button
+                type="button"
+                class="btn btn-light bookmark-btn"
+                aria-label="Guardar convocatoria">
+
+                <i class="fa-regular fa-bookmark"></i>
+
+              </button>
+
+            </div>
+
+
+            <p class="text-muted mt-4 mb-4">
+              Participa en procesos de selección, capacitación,
+              seguimiento de personal y clima organizacional.
+            </p>
+
+
+            <div class="d-flex flex-wrap gap-3 text-muted small mb-4">
+
+              <span>
+                <i class="fa-solid fa-location-dot text-success me-1"></i>
+                Miraflores
+              </span>
+
+              <span>
+                <i class="fa-solid fa-clock text-success me-1"></i>
+                Part time
+              </span>
+
+              <span>
+                <i class="fa-solid fa-laptop-house text-success me-1"></i>
+                Híbrido
+              </span>
+
+              <span>
+                <i class="fa-solid fa-calendar text-success me-1"></i>
+                Publicado hace 5 días
+              </span>
+
+            </div>
+
+
+            <div class="d-flex flex-column flex-md-row
+                        justify-content-between
+                        align-items-md-center gap-3">
+
+              <div class="d-flex flex-wrap gap-2">
+
+                <span class="badge skill-badge">
+                  Comunicación
+                </span>
+
+                <span class="badge skill-badge">
+                  Excel
+                </span>
+
+                <span class="badge skill-badge">
+                  Organización
+                </span>
+
+              </div>
+
+
+              <a
+                href="#"
+                class="btn btn-outline-success">
+
+                Ver convocatoria
+                <i class="fa-solid fa-arrow-right ms-2"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             CONVOCATORIA 6
+        ====================================================== -->
+
+        <div class="card border-0 shadow-sm opportunity-card mb-4">
+
+          <div class="card-body p-4">
+
+            <div class="d-flex justify-content-between
+                        align-items-start gap-3">
+
+              <div class="d-flex gap-3">
+
+                <div class="company-logo company-logo-dark">
+                  <i class="fa-solid fa-truck-fast"></i>
+                </div>
+
+                <div>
+
+                  <span class="badge bg-secondary-subtle text-secondary mb-2">
+                    Convocatoria activa
+                  </span>
+
+                  <h5 class="fw-bold mb-1">
+                    Practicante de Logística
+                  </h5>
+
+                  <p class="text-muted mb-0">
+                    <i class="fa-solid fa-building me-1"></i>
+                    Industrias del Sur
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <button
+                type="button"
+                class="btn btn-light bookmark-btn"
+                aria-label="Guardar convocatoria">
+
+                <i class="fa-regular fa-bookmark"></i>
+
+              </button>
+
+            </div>
+
+
+            <p class="text-muted mt-4 mb-4">
+              Apoya en la planificación de inventarios, seguimiento
+              de pedidos y coordinación con proveedores.
+            </p>
+
+
+            <div class="d-flex flex-wrap gap-3 text-muted small mb-4">
+
+              <span>
+                <i class="fa-solid fa-location-dot text-success me-1"></i>
+                Villa El Salvador
+              </span>
+
+              <span>
+                <i class="fa-solid fa-clock text-success me-1"></i>
+                Full time
+              </span>
+
+              <span>
+                <i class="fa-solid fa-laptop-house text-success me-1"></i>
+                Presencial
+              </span>
+
+              <span>
+                <i class="fa-solid fa-calendar text-success me-1"></i>
+                Publicado hace 6 días
+              </span>
+
+            </div>
+
+
+            <div class="d-flex flex-column flex-md-row
+                        justify-content-between
+                        align-items-md-center gap-3">
+
+              <div class="d-flex flex-wrap gap-2">
+
+                <span class="badge skill-badge">
+                  Logística
+                </span>
+
+                <span class="badge skill-badge">
+                  Excel
+                </span>
+
+                <span class="badge skill-badge">
+                  Inventarios
+                </span>
+
+              </div>
+
+
+              <a
+                href="#"
+                class="btn btn-outline-success">
+
+                Ver convocatoria
+                <i class="fa-solid fa-arrow-right ms-2"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Paginación decorativa -->
+        <nav aria-label="Paginación">
+
+          <ul class="pagination justify-content-center mt-5">
+
+            <li class="page-item disabled">
+              <a class="page-link" href="#">
+                <i class="fa-solid fa-chevron-left"></i>
+              </a>
+            </li>
+
+            <li class="page-item active">
+              <a class="page-link bg-success border-success" href="#">
+                1
+              </a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link text-success" href="#">
+                2
+              </a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link text-success" href="#">
+                3
+              </a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link text-success" href="#">
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+
+          </ul>
+
+        </nav>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="py-5">
+
+  <div class="container">
+
+    <div class="cta-convocatorias rounded-4 p-5 text-center text-white">
+
+      <i class="fa-solid fa-graduation-cap display-4 mb-3"></i>
+
+      <h2 class="fw-bold mb-3">
+        ¿Todavía no tienes una cuenta?
+      </h2>
+
+      <p class="lead mb-4">
+        Regístrate para postular a convocatorias y guardar
+        tus oportunidades favoritas.
+      </p>
+
+      <a
+        href="/register"
+        class="btn btn-light btn-lg px-4">
+
+        <i class="fa-solid fa-user-plus me-2"></i>
+        Crear una cuenta
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ESTILOS
+========================================================= -->
+
+<style>
+
+  .convocatorias-header {
+    background:
+      radial-gradient(
+        circle at 85% 20%,
+        rgba(25, 135, 84, .18),
+        transparent 35%
+      ),
+      #212529;
+  }
+
+
+  .header-icon {
+    font-size: 9rem;
+    color: rgba(25, 135, 84, .45);
+  }
+
+
+  .filter-card,
+  .opportunity-card {
+    border-radius: 18px;
+  }
+
+
+  .opportunity-card {
+    transition: all .25s ease;
+  }
+
+
+  .opportunity-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, .08) !important;
+  }
+
+
+  .company-logo {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 16px;
+
+    font-size: 1.5rem;
+  }
+
+
+  .company-logo-green {
+    color: #198754;
+    background: rgba(25, 135, 84, .12);
+  }
+
+
+  .company-logo-blue {
+    color: #0d6efd;
+    background: rgba(13, 110, 253, .12);
+  }
+
+
+  .company-logo-purple {
+    color: #6f42c1;
+    background: rgba(111, 66, 193, .12);
+  }
+
+
+  .company-logo-orange {
+    color: #fd7e14;
+    background: rgba(253, 126, 20, .12);
+  }
+
+
+  .company-logo-red {
+    color: #dc3545;
+    background: rgba(220, 53, 69, .12);
+  }
+
+
+  .company-logo-dark {
+    color: #495057;
+    background: rgba(73, 80, 87, .12);
+  }
+
+
+  .bookmark-btn {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+
+    transition: all .2s ease;
+  }
+
+
+  .bookmark-btn:hover {
+    color: #198754;
+    border-color: #198754;
+    background: rgba(25, 135, 84, .08);
+  }
+
+
+  .skill-badge {
+    color: #495057;
+    background: #f1f3f5;
+    border: 1px solid #dee2e6;
+    padding: .5rem .75rem;
+    font-weight: 500;
+  }
+
+
+  .cta-convocatorias {
+    background:
+      linear-gradient(
+        135deg,
+        #198754,
+        #146c43
+      );
+
+    box-shadow: 0 12px 35px rgba(25, 135, 84, .20);
+  }
+
+
+  @media (max-width: 767.98px) {
+
+    .header-icon {
+      display: none;
+    }
+
+    .opportunity-card .card-body {
+      padding: 1.25rem !important;
+    }
+
+  }
+
+</style>

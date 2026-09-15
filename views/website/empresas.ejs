@@ -1,0 +1,787 @@
+<!-- views/website/empresas.ejs -->
+
+<% layout("layouts/website") %>
+
+
+<!-- =========================================================
+     ENCABEZADO
+========================================================= -->
+
+<section class="empresas-header bg-dark text-white py-5">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-8">
+
+        <span class="badge bg-success px-3 py-2 mb-3">
+          <i class="fa-solid fa-building me-2"></i>
+          EMPRESAS PARTICIPANTES
+        </span>
+
+        <h1 class="display-5 fw-bold mb-3">
+          Conoce las empresas
+        </h1>
+
+        <p class="lead text-secondary mb-0">
+          Descubre organizaciones que buscan talento universitario
+          para sus oportunidades de prácticas pre-profesionales.
+        </p>
+
+      </div>
+
+
+      <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+        <i class="fa-solid fa-building-circle-check header-icon"></i>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BUSCADOR
+========================================================= -->
+
+<section class="py-5 bg-light">
+
+  <div class="container">
+
+    <div class="card border-0 shadow-sm search-card">
+
+      <div class="card-body p-4">
+
+        <form action="/empresas" method="GET">
+
+          <div class="row g-3 align-items-end">
+
+            <!-- Buscar empresa -->
+            <div class="col-12 col-lg-7">
+
+              <label class="form-label fw-semibold">
+                Buscar empresa
+              </label>
+
+              <div class="input-group">
+
+                <span class="input-group-text bg-white">
+                  <i class="fa-solid fa-magnifying-glass text-success"></i>
+                </span>
+
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control"
+                  placeholder="Ej. Tecnología, bancos, consultoras...">
+
+              </div>
+
+            </div>
+
+
+            <!-- Sector -->
+            <div class="col-12 col-md-6 col-lg-3">
+
+              <label class="form-label fw-semibold">
+                Sector
+              </label>
+
+              <select
+                name="sector"
+                class="form-select">
+
+                <option value="">
+                  Todos los sectores
+                </option>
+
+                <option value="tecnologia">
+                  Tecnología
+                </option>
+
+                <option value="finanzas">
+                  Finanzas
+                </option>
+
+                <option value="consultoria">
+                  Consultoría
+                </option>
+
+                <option value="retail">
+                  Retail
+                </option>
+
+                <option value="marketing">
+                  Marketing
+
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <!-- Botón -->
+            <div class="col-12 col-md-6 col-lg-2">
+
+              <button
+                type="submit"
+                class="btn btn-success w-100">
+
+                <i class="fa-solid fa-search me-2"></i>
+                Buscar
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EMPRESAS DESTACADAS
+========================================================= -->
+
+<section class="py-5">
+
+  <div class="container">
+
+    <div class="d-flex flex-column flex-md-row
+                justify-content-between align-items-md-center
+                gap-3 mb-4">
+
+      <div>
+
+        <span class="text-success fw-bold text-uppercase">
+          Empresas participantes
+        </span>
+
+        <h2 class="fw-bold mt-2 mb-1">
+          Organizaciones que buscan talento
+        </h2>
+
+        <p class="text-muted mb-0">
+          Explora empresas y conoce sus áreas de trabajo.
+        </p>
+
+      </div>
+
+
+      <span class="badge bg-success-subtle text-success px-3 py-2">
+        6 empresas disponibles
+      </span>
+
+    </div>
+
+
+    <div class="row g-4">
+
+      <!-- Empresa 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card company-card border-0 shadow-sm h-100">
+
+          <div class="card-body p-4">
+
+            <div class="d-flex justify-content-between
+                        align-items-start mb-4">
+
+              <div class="company-logo company-logo-green">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+
+              <span class="badge bg-success-subtle text-success">
+                Tecnología
+              </span>
+
+            </div>
+
+
+            <h5 class="fw-bold mb-2">
+              Innovatech Perú
+            </h5>
+
+            <p class="text-muted small mb-4">
+              Empresa especializada en soluciones digitales,
+              desarrollo de software y transformación tecnológica.
+            </p>
+
+
+            <div class="company-info mb-4">
+
+              <div class="mb-2">
+                <i class="fa-solid fa-location-dot text-success me-2"></i>
+                <span class="text-muted small">
+                  Lima, Perú
+                </span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-briefcase text-success me-2"></i>
+                <span class="text-muted small">
+                  4 convocatorias activas
+                </span>
+              </div>
+
+            </div>
+
+
+            <a
+              href="/empresas/1"
+              class="btn btn-outline-success w-100">
+
+              Ver empresa
+              <i class="fa-solid fa-arrow-right ms-2"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Empresa 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card company-card border-0 shadow-sm h-100">
+
+          <div class="card-body p-4">
+
+            <div class="d-flex justify-content-between
+                        align-items-start mb-4">
+
+              <div class="company-logo company-logo-blue">
+                <i class="fa-solid fa-chart-column"></i>
+              </div>
+
+              <span class="badge bg-primary-subtle text-primary">
+                Finanzas
+              </span>
+
+            </div>
+
+
+            <h5 class="fw-bold mb-2">
+              Grupo Financiero Andino
+            </h5>
+
+            <p class="text-muted small mb-4">
+              Organización dedicada a servicios financieros,
+              banca, inversiones y asesoría empresarial.
+            </p>
+
+
+            <div class="company-info mb-4">
+
+              <div class="mb-2">
+                <i class="fa-solid fa-location-dot text-success me-2"></i>
+                <span class="text-muted small">
+                  San Isidro, Lima
+                </span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-briefcase text-success me-2"></i>
+                <span class="text-muted small">
+                  6 convocatorias activas
+                </span>
+              </div>
+
+            </div>
+
+
+            <a
+              href="/empresas/2"
+              class="btn btn-outline-success w-100">
+
+              Ver empresa
+              <i class="fa-solid fa-arrow-right ms-2"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Empresa 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card company-card border-0 shadow-sm h-100">
+
+          <div class="card-body p-4">
+
+            <div class="d-flex justify-content-between
+                        align-items-start mb-4">
+
+              <div class="company-logo company-logo-purple">
+                <i class="fa-solid fa-users-gear"></i>
+              </div>
+
+              <span class="badge bg-purple-subtle text-purple">
+                Consultoría
+              </span>
+
+            </div>
+
+
+            <h5 class="fw-bold mb-2">
+              Consultores Asociados
+            </h5>
+
+            <p class="text-muted small mb-4">
+              Firma de consultoría empresarial enfocada en procesos,
+              estrategia y gestión organizacional.
+            </p>
+
+
+            <div class="company-info mb-4">
+
+              <div class="mb-2">
+                <i class="fa-solid fa-location-dot text-success me-2"></i>
+                <span class="text-muted small">
+                  Miraflores, Lima
+                </span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-briefcase text-success me-2"></i>
+                <span class="text-muted small">
+                  3 convocatorias activas
+                </span>
+              </div>
+
+            </div>
+
+
+            <a
+              href="/empresas/3"
+              class="btn btn-outline-success w-100">
+
+              Ver empresa
+              <i class="fa-solid fa-arrow-right ms-2"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Empresa 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card company-card border-0 shadow-sm h-100">
+
+          <div class="card-body p-4">
+
+            <div class="d-flex justify-content-between
+                        align-items-start mb-4">
+
+              <div class="company-logo company-logo-orange">
+                <i class="fa-solid fa-store"></i>
+              </div>
+
+              <span class="badge bg-warning-subtle text-warning">
+                Retail
+              </span>
+
+            </div>
+
+
+            <h5 class="fw-bold mb-2">
+              Comercial del Pacífico
+            </h5>
+
+            <p class="text-muted small mb-4">
+              Empresa comercial dedicada a la distribución,
+              ventas y atención de clientes a nivel nacional.
+            </p>
+
+
+            <div class="company-info mb-4">
+
+              <div class="mb-2">
+                <i class="fa-solid fa-location-dot text-success me-2"></i>
+                <span class="text-muted small">
+                  Lima, Perú
+                </span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-briefcase text-success me-2"></i>
+                <span class="text-muted small">
+                  5 convocatorias activas
+                </span>
+              </div>
+
+            </div>
+
+
+            <a
+              href="/empresas/4"
+              class="btn btn-outline-success w-100">
+
+              Ver empresa
+              <i class="fa-solid fa-arrow-right ms-2"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Empresa 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card company-card border-0 shadow-sm h-100">
+
+          <div class="card-body p-4">
+
+            <div class="d-flex justify-content-between
+                        align-items-start mb-4">
+
+              <div class="company-logo company-logo-red">
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+
+              <span class="badge bg-danger-subtle text-danger">
+                Marketing
+              </span>
+
+            </div>
+
+
+            <h5 class="fw-bold mb-2">
+              Agencia Punto Creativo
+            </h5>
+
+            <p class="text-muted small mb-4">
+              Agencia especializada en comunicación, publicidad,
+              branding y marketing digital.
+            </p>
+
+
+            <div class="company-info mb-4">
+
+              <div class="mb-2">
+                <i class="fa-solid fa-location-dot text-success me-2"></i>
+                <span class="text-muted small">
+                  Barranco, Lima
+                </span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-briefcase text-success me-2"></i>
+                <span class="text-muted small">
+                  2 convocatorias activas
+                </span>
+              </div>
+
+            </div>
+
+
+            <a
+              href="/empresas/5"
+              class="btn btn-outline-success w-100">
+
+              Ver empresa
+              <i class="fa-solid fa-arrow-right ms-2"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Empresa 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card company-card border-0 shadow-sm h-100">
+
+          <div class="card-body p-4">
+
+            <div class="d-flex justify-content-between
+                        align-items-start mb-4">
+
+              <div class="company-logo company-logo-dark">
+                <i class="fa-solid fa-industry"></i>
+              </div>
+
+              <span class="badge bg-secondary-subtle text-secondary">
+                Manufactura
+              </span>
+
+            </div>
+
+
+            <h5 class="fw-bold mb-2">
+              Industrias del Sur
+            </h5>
+
+            <p class="text-muted small mb-4">
+              Empresa dedicada a la producción, operaciones,
+              logística y mejora continua.
+            </p>
+
+
+            <div class="company-info mb-4">
+
+              <div class="mb-2">
+                <i class="fa-solid fa-location-dot text-success me-2"></i>
+                <span class="text-muted small">
+                  Villa El Salvador, Lima
+                </span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-briefcase text-success me-2"></i>
+                <span class="text-muted small">
+                  3 convocatorias activas
+                </span>
+              </div>
+
+            </div>
+
+
+            <a
+              href="/empresas/6"
+              class="btn btn-outline-success w-100">
+
+              Ver empresa
+              <i class="fa-solid fa-arrow-right ms-2"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA PARA EMPRESAS
+========================================================= -->
+
+<section class="py-5 bg-light">
+
+  <div class="container">
+
+    <div class="company-cta rounded-4 p-5 text-white">
+
+      <div class="row align-items-center g-4">
+
+        <div class="col-lg-8">
+
+          <span class="badge bg-light text-success mb-3 px-3 py-2">
+            ¿REPRESENTAS A UNA EMPRESA?
+          </span>
+
+          <h2 class="fw-bold mb-3">
+            Encuentra el talento que tu organización necesita
+          </h2>
+
+          <p class="lead mb-0">
+            Publica tus convocatorias y conecta con estudiantes
+            de la Universidad de Lima.
+          </p>
+
+        </div>
+
+
+        <div class="col-lg-4 text-lg-end">
+
+          <a
+            href="/register"
+            class="btn btn-light btn-lg px-4">
+
+            <i class="fa-solid fa-building me-2"></i>
+            Registrar empresa
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ESTILOS
+========================================================= -->
+
+<style>
+
+  .empresas-header {
+    background:
+      radial-gradient(
+        circle at 85% 20%,
+        rgba(25, 135, 84, .18),
+        transparent 35%
+      ),
+      #212529;
+  }
+
+
+  .header-icon {
+    font-size: 8rem;
+    color: rgba(25, 135, 84, .45);
+  }
+
+
+  .search-card {
+    border-radius: 18px;
+  }
+
+
+  .company-card {
+    border-radius: 18px;
+    transition: all .25s ease;
+  }
+
+
+  .company-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, .10) !important;
+  }
+
+
+  .company-logo {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    font-size: 1.6rem;
+  }
+
+
+  .company-logo-green {
+    color: #198754;
+    background: rgba(25, 135, 84, .12);
+  }
+
+
+  .company-logo-blue {
+    color: #0d6efd;
+    background: rgba(13, 110, 253, .12);
+  }
+
+
+  .company-logo-purple {
+    color: #6f42c1;
+    background: rgba(111, 66, 193, .12);
+  }
+
+
+  .company-logo-orange {
+    color: #fd7e14;
+    background: rgba(253, 126, 20, .12);
+  }
+
+
+  .company-logo-red {
+    color: #dc3545;
+    background: rgba(220, 53, 69, .12);
+  }
+
+
+  .company-logo-dark {
+    color: #495057;
+    background: rgba(73, 80, 87, .12);
+  }
+
+
+  .bg-purple-subtle {
+    background: rgba(111, 66, 193, .12);
+  }
+
+
+  .text-purple {
+    color: #6f42c1;
+  }
+
+
+  .company-info {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 16px;
+  }
+
+
+  .company-cta {
+    background:
+      linear-gradient(
+        135deg,
+        #198754,
+        #146c43
+      );
+
+    box-shadow: 0 12px 35px rgba(25, 135, 84, .20);
+  }
+
+
+  @media (max-width: 767.98px) {
+
+    .header-icon {
+      display: none;
+    }
+
+    .company-cta {
+      padding: 2rem !important;
+    }
+
+  }
+
+</style>
