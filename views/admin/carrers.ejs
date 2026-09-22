@@ -23,13 +23,13 @@
     <div class="card">
 
       <div class="card-header">
-        <h6 class="mb-0">
+        <h6 class="mb-0" id="Ncarrera">
           <i class="fa fa-plus me-2"></i>
           Nueva Carrera
         </h6>
       </div>
 
-      <div class="card-body">
+      <div class="card-body"> 
 
         <form method="POST" action="/carrers">
 
@@ -38,6 +38,7 @@
             <label for="name" class="form-label">
               Nombre
             </label>
+          <input type="hidden" id="carrerID" value="">
 
             <input
               type="text"
@@ -53,13 +54,13 @@
 
           <div class="d-flex justify-content-end gap-2">
 
-            <a
-              href="/carrers"
+            <button 
+              onclick="Eliminar(event)"
               class="btn btn-outline-secondary"
             >
               <i class="fa fa-refresh me-1"></i>
               Limpiar
-            </a>
+            </button>
 
             <button
               type="submit"
@@ -203,11 +204,21 @@
 <script>
     let carrerRows = document.getElementById("tablita").children[1].children.length;
 
+    function Eliminar(event){
+      event.preventDefault();
+        document.getElementById("carrerID").value="";
+        document.getElementById("name").value="";
+        document.getElementById("Ncarrera").innerHTML="Nueva Carrera";
+    }
+
     function RegistrarCarrera(event) {
         event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
         let name = document.getElementById("name").value;
         let TableCarrers = document.getElementById("tablita");
+        let carrerID =document.getElementById("carrerID").value;
 
+        if(carrerID==""){  
         let tr = document.createElement("TR");
         let td1 = document.createElement("TD");
         let td2 = document.createElement("TD");
@@ -240,6 +251,27 @@
 
         console.log(tr);
         TableCarrers.children[1].appendChild(tr);
+        
+        
+
+        }
+        else{
+         
+          let tbody=TableCarrers.children[1];
+
+
+          for (let tr of tbody.children){
+            //console.log(tr) //cada elemento
+            if(tr.children[0].innerHTML.trim()==carrerID){
+                tr.children[1].innerHTML=name;
+                document.getElementById("carrerID").value="";
+                document.getElementById("name").value="";
+                document.getElementById("Ncarrera").innerHTML="Nueva Carrera";
+            }
+          }
+        }
+
+       
     }
 
     function eliminar(id,event){
@@ -248,11 +280,16 @@
     }    
 
     function editar(id,event){
+        event.preventDefault();
         let td=event.currentTarget.parentElement.parentElement;
         let idrown = td.children[0].innerHTML;
         let name=td.children[1].innerHTML;
-        document.getElementById("name").value=name;
+        
+        document.getElementById("name").value=name.trim();
+        document.getElementById("carrerID").value=idrown.trim();
+        document.getElementById("Ncarrera").innerHTML="Editar Carrera";
 
+        console.log(document.getElementById("carrerID").value=idrown.trim())
 
 
     }
