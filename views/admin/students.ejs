@@ -324,7 +324,11 @@
 
         console.log(tr);
         TableStudent.children[1].appendChild(tr);
-        
+        document.getElementById("studentID").value="";
+        document.getElementById("name").value="";
+        document.getElementById("lastName").value="";
+        document.getElementById("carrer").value="";
+        document.getElementById("age").value="";
         
 
         }
@@ -397,18 +401,18 @@ function ingresar(event) {
                     alert.classList.add("alert-success");
 
                 }
-                if (name == "" || studentID == "" || lastname == "" || carrer == "" ) {
-                // alert("ingresa los campos");
-                alert.classList.remove("d-none");
-                alert.classList.remove("alert-success");
-                alert.classList.add("alert-danger");
-                alert.innerHTML = "Completa los datos del alumno";
-                }
                 if(age<15 || age>101 ){
                 alert.classList.remove("d-none");
                 alert.classList.remove("alert-success");
                 alert.classList.add("alert-danger");
                 alert.innerHTML = "La edad tiene que ser entre 16 y 100";
+              }
+              
+              if(name=="" || lastname=="" || carrer==""){
+                alert.classList.remove("d-none");
+                alert.classList.remove("alert-success");
+                alert.classList.add("alert-danger");
+                alert.innerHTML = "Todos los campos son obligatorios";
               }
             
             setInterval(() => {
