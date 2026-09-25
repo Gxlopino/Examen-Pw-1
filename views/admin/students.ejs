@@ -392,7 +392,12 @@ function ingresar(event) {
             let carrer = document.getElementById("carrer").value;
             let age = Number(document.getElementById("age").value);
             let alert = document.getElementById("Error");
-            
+              if(name=="" || lastname=="" || carrer==""){
+                alert.classList.remove("d-none");
+                alert.classList.remove("alert-success");
+                alert.classList.add("alert-danger");
+                alert.innerHTML = "Todos los campos son obligatorios";
+              }
                 if (age>=15 && age<=101) {
                     RegistrarAlumno(event);
                     alert.classList.remove("d-none");
@@ -407,13 +412,8 @@ function ingresar(event) {
                 alert.classList.add("alert-danger");
                 alert.innerHTML = "La edad tiene que ser entre 16 y 100";
               }
-              
-              if(name=="" || lastname=="" || carrer==""){
-                alert.classList.remove("d-none");
-                alert.classList.remove("alert-success");
-                alert.classList.add("alert-danger");
-                alert.innerHTML = "Todos los campos son obligatorios";
-              }
+
+
             
             setInterval(() => {
                 alert.classList.add("d-none")
